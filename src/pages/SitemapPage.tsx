@@ -61,10 +61,10 @@ export default function SitemapPage() {
           </div>
 
           <div className="mt-12 pt-8 border-t border-charcoal-100">
-            <h2 className="font-display text-lg font-bold text-navy-900 mb-4">Popular Service Locations</h2>
+            <h2 className="font-display text-lg font-bold text-navy-900 mb-4">All Service Location Pages</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 text-sm">
-              {services.slice(0, 4).map((s) =>
-                locations.slice(0, 6).map((l) => (
+              {services.map((s) =>
+                locations.map((l) => (
                   <Link
                     key={`${s.slug}-${l.slug}`}
                     to={`/${s.slug}-${l.slug}`}

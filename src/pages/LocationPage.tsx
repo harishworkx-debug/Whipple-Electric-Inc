@@ -56,12 +56,54 @@ export default function LocationPage({ slug }: { slug: string }) {
         <div className="container-max px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-3">
             <div className="lg:col-span-2">
+              <div className="mb-4 flex flex-wrap items-center gap-2">
+                <span className="text-xs font-bold uppercase tracking-wider text-charcoal-500">Zip Codes Served:</span>
+                {location.zipCodes.map((zip) => (
+                  <span key={zip} className="rounded-md bg-electric-100/70 px-2.5 py-1 text-xs font-bold text-electric-800">
+                    {zip}
+                  </span>
+                ))}
+              </div>
+
               <h2 className="font-display text-2xl font-bold text-navy-900 lg:text-3xl">
                 Electrical Services in {location.shortName}
               </h2>
               <p className="mt-4 text-lg leading-relaxed text-charcoal-700">{location.localContext}</p>
 
-              <h3 className="mt-10 font-display text-xl font-bold text-navy-900">Services We Offer in {location.shortName}</h3>
+              {/* Local Upgrades Breakdown */}
+              <div className="mt-8 rounded-xl border border-charcoal-200 bg-charcoal-50 p-6">
+                <h3 className="font-display text-lg font-bold text-navy-900">
+                  Most Requested Electrical Work in {location.shortName}
+                </h3>
+                <div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2 text-sm">
+                  <div className="rounded-lg bg-white p-3.5 border border-charcoal-200/80">
+                    <h4 className="font-bold text-navy-900">200-Amp Panel Upgrades</h4>
+                    <p className="mt-1 text-charcoal-600 text-xs leading-relaxed">
+                      Replacing overloaded or recalled electrical panels to support central AC, modern appliances, and EV chargers safely.
+                    </p>
+                  </div>
+                  <div className="rounded-lg bg-white p-3.5 border border-charcoal-200/80">
+                    <h4 className="font-bold text-navy-900">GFCI & Grounding Updates</h4>
+                    <p className="mt-1 text-charcoal-600 text-xs leading-relaxed">
+                      Bringing mid-century 2-prong ungrounded receptacles up to code with grounded, shock-resistant GFCI devices.
+                    </p>
+                  </div>
+                  <div className="rounded-lg bg-white p-3.5 border border-charcoal-200/80">
+                    <h4 className="font-bold text-navy-900">Troubleshooting & Repairs</h4>
+                    <p className="mt-1 text-charcoal-600 text-xs leading-relaxed">
+                      Rapid diagnostic and repair of mysterious outages, tripping breakers, hot outlets, or flickering lights.
+                    </p>
+                  </div>
+                  <div className="rounded-lg bg-white p-3.5 border border-charcoal-200/80">
+                    <h4 className="font-bold text-navy-900">Indoor & Outdoor Lighting</h4>
+                    <p className="mt-1 text-charcoal-600 text-xs leading-relaxed">
+                      Modern recessed lighting layout, security motion floodlights, ceiling fans, and whole-home dimmer installations.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <h3 className="mt-10 font-display text-xl font-bold text-navy-900">Browse Services in {location.shortName}</h3>
               <div className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2">
                 {services.map((service) => (
                   <Link
@@ -77,9 +119,9 @@ export default function LocationPage({ slug }: { slug: string }) {
             </div>
 
             <div className="lg:col-span-1">
-              <div className="sticky top-28 rounded-xl border border-charcoal-100 bg-charcoal-50 p-6">
+              <div className="sticky top-28 rounded-xl border border-charcoal-100 bg-charcoal-50 p-6 shadow-card">
                 <h3 className="font-display text-lg font-bold text-navy-900">Request an Estimate</h3>
-                <p className="mt-1 text-sm text-charcoal-600">Serving {location.shortName} and nearby areas.</p>
+                <p className="mt-1 text-sm text-charcoal-600">Serving {location.shortName} and surrounding communities.</p>
                 <EstimateForm defaultLocation={location.shortName + ', MI'} compact />
               </div>
             </div>

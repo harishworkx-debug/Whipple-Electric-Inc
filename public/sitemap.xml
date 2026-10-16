@@ -36,24 +36,111 @@
   <url><loc>https://www.whippleelectricinc.com/electrician-trenton-mi</loc><priority>0.8</priority></url>
   <url><loc>https://www.whippleelectricinc.com/electrician-detroit-mi</loc><priority>0.8</priority></url>
 
-  <!-- Other Service-Location Landing Pages -->
-
+  <!-- Service-Location Landing Pages: Southgate, MI -->
   <url><loc>https://www.whippleelectricinc.com/electrical-troubleshooting-southgate-mi</loc><priority>0.7</priority></url>
   <url><loc>https://www.whippleelectricinc.com/electrical-panel-upgrades-southgate-mi</loc><priority>0.7</priority></url>
   <url><loc>https://www.whippleelectricinc.com/circuit-breaker-repair-southgate-mi</loc><priority>0.7</priority></url>
   <url><loc>https://www.whippleelectricinc.com/electrical-wiring-southgate-mi</loc><priority>0.7</priority></url>
+  <url><loc>https://www.whippleelectricinc.com/outlet-switch-installation-southgate-mi</loc><priority>0.7</priority></url>
   <url><loc>https://www.whippleelectricinc.com/lighting-installation-southgate-mi</loc><priority>0.7</priority></url>
+  <url><loc>https://www.whippleelectricinc.com/ceiling-fan-installation-southgate-mi</loc><priority>0.7</priority></url>
+  <url><loc>https://www.whippleelectricinc.com/electrical-safety-inspection-southgate-mi</loc><priority>0.7</priority></url>
+  <url><loc>https://www.whippleelectricinc.com/commercial-electrical-southgate-mi</loc><priority>0.7</priority></url>
+  <url><loc>https://www.whippleelectricinc.com/renovation-electrical-southgate-mi</loc><priority>0.7</priority></url>
 
-  <url><loc>https://www.whippleelectricinc.com/electrical-troubleshooting-dearborn-mi</loc><priority>0.7</priority></url>
-  <url><loc>https://www.whippleelectricinc.com/electrical-panel-upgrades-dearborn-mi</loc><priority>0.7</priority></url>
-  <url><loc>https://www.whippleelectricinc.com/electrical-wiring-dearborn-mi</loc><priority>0.7</priority></url>
-  <url><loc>https://www.whippleelectricinc.com/lighting-installation-dearborn-mi</loc><priority>0.7</priority></url>
-
+  <!-- Service-Location Landing Pages: Allen Park, MI -->
   <url><loc>https://www.whippleelectricinc.com/electrical-troubleshooting-allen-park-mi</loc><priority>0.7</priority></url>
   <url><loc>https://www.whippleelectricinc.com/electrical-panel-upgrades-allen-park-mi</loc><priority>0.7</priority></url>
+  <url><loc>https://www.whippleelectricinc.com/circuit-breaker-repair-allen-park-mi</loc><priority>0.7</priority></url>
+  <url><loc>https://www.whippleelectricinc.com/electrical-wiring-allen-park-mi</loc><priority>0.7</priority></url>
+  <url><loc>https://www.whippleelectricinc.com/outlet-switch-installation-allen-park-mi</loc><priority>0.7</priority></url>
+  <url><loc>https://www.whippleelectricinc.com/lighting-installation-allen-park-mi</loc><priority>0.7</priority></url>
+  <url><loc>https://www.whippleelectricinc.com/ceiling-fan-installation-allen-park-mi</loc><priority>0.7</priority></url>
+  <url><loc>https://www.whippleelectricinc.com/electrical-safety-inspection-allen-park-mi</loc><priority>0.7</priority></url>
+  <url><loc>https://www.whippleelectricinc.com/commercial-electrical-allen-park-mi</loc><priority>0.7</priority></url>
+  <url><loc>https://www.whippleelectricinc.com/renovation-electrical-allen-park-mi</loc><priority>0.7</priority></url>
+
+  <!-- Service-Location Landing Pages: Dearborn, MI -->
+  <url><loc>https://www.whippleelectricinc.com/electrical-troubleshooting-dearborn-mi</loc><priority>0.7</priority></url>
+  <url><loc>https://www.whippleelectricinc.com/electrical-panel-upgrades-dearborn-mi</loc><priority>0.7</priority></url>
+  <url><loc>https://www.whippleelectricinc.com/circuit-breaker-repair-dearborn-mi</loc><priority>0.7</priority></url>
+  <url><loc>https://www.whippleelectricinc.com/electrical-wiring-dearborn-mi</loc><priority>0.7</priority></url>
+  <url><loc>https://www.whippleelectricinc.com/outlet-switch-installation-dearborn-mi</loc><priority>0.7</priority></url>
+  <url><loc>https://www.whippleelectricinc.com/lighting-installation-dearborn-mi</loc><priority>0.7</priority></url>
+  <url><loc>https://www.whippleelectricinc.com/ceiling-fan-installation-dearborn-mi</loc><priority>0.7</priority></url>
+  <url><loc>https://www.whippleelectricinc.com/electrical-safety-inspection-dearborn-mi</loc><priority>0.7</priority></url>
+  <url><loc>https://www.whippleelectricinc.com/commercial-electrical-dearborn-mi</loc><priority>0.7</priority></url>
+  <url><loc>https://www.whippleelectricinc.com/renovation-electrical-dearborn-mi</loc><priority>0.7</priority></url>
+
+  <!-- Service-Location Landing Pages: Dearborn Heights, MI -->
+  <url><loc>https://www.whippleelectricinc.com/electrical-troubleshooting-dearborn-heights-mi</loc><priority>0.7</priority></url>
+  <url><loc>https://www.whippleelectricinc.com/electrical-panel-upgrades-dearborn-heights-mi</loc><priority>0.7</priority></url>
+  <url><loc>https://www.whippleelectricinc.com/circuit-breaker-repair-dearborn-heights-mi</loc><priority>0.7</priority></url>
+  <url><loc>https://www.whippleelectricinc.com/electrical-wiring-dearborn-heights-mi</loc><priority>0.7</priority></url>
+  <url><loc>https://www.whippleelectricinc.com/outlet-switch-installation-dearborn-heights-mi</loc><priority>0.7</priority></url>
+  <url><loc>https://www.whippleelectricinc.com/lighting-installation-dearborn-heights-mi</loc><priority>0.7</priority></url>
+  <url><loc>https://www.whippleelectricinc.com/ceiling-fan-installation-dearborn-heights-mi</loc><priority>0.7</priority></url>
+  <url><loc>https://www.whippleelectricinc.com/electrical-safety-inspection-dearborn-heights-mi</loc><priority>0.7</priority></url>
+  <url><loc>https://www.whippleelectricinc.com/commercial-electrical-dearborn-heights-mi</loc><priority>0.7</priority></url>
+  <url><loc>https://www.whippleelectricinc.com/renovation-electrical-dearborn-heights-mi</loc><priority>0.7</priority></url>
+
+  <!-- Service-Location Landing Pages: Romulus, MI -->
   <url><loc>https://www.whippleelectricinc.com/electrical-troubleshooting-romulus-mi</loc><priority>0.7</priority></url>
+  <url><loc>https://www.whippleelectricinc.com/electrical-panel-upgrades-romulus-mi</loc><priority>0.7</priority></url>
+  <url><loc>https://www.whippleelectricinc.com/circuit-breaker-repair-romulus-mi</loc><priority>0.7</priority></url>
+  <url><loc>https://www.whippleelectricinc.com/electrical-wiring-romulus-mi</loc><priority>0.7</priority></url>
+  <url><loc>https://www.whippleelectricinc.com/outlet-switch-installation-romulus-mi</loc><priority>0.7</priority></url>
+  <url><loc>https://www.whippleelectricinc.com/lighting-installation-romulus-mi</loc><priority>0.7</priority></url>
+  <url><loc>https://www.whippleelectricinc.com/ceiling-fan-installation-romulus-mi</loc><priority>0.7</priority></url>
+  <url><loc>https://www.whippleelectricinc.com/electrical-safety-inspection-romulus-mi</loc><priority>0.7</priority></url>
+  <url><loc>https://www.whippleelectricinc.com/commercial-electrical-romulus-mi</loc><priority>0.7</priority></url>
+  <url><loc>https://www.whippleelectricinc.com/renovation-electrical-romulus-mi</loc><priority>0.7</priority></url>
+
+  <!-- Service-Location Landing Pages: Wyandotte, MI -->
   <url><loc>https://www.whippleelectricinc.com/electrical-troubleshooting-wyandotte-mi</loc><priority>0.7</priority></url>
+  <url><loc>https://www.whippleelectricinc.com/electrical-panel-upgrades-wyandotte-mi</loc><priority>0.7</priority></url>
+  <url><loc>https://www.whippleelectricinc.com/circuit-breaker-repair-wyandotte-mi</loc><priority>0.7</priority></url>
+  <url><loc>https://www.whippleelectricinc.com/electrical-wiring-wyandotte-mi</loc><priority>0.7</priority></url>
+  <url><loc>https://www.whippleelectricinc.com/outlet-switch-installation-wyandotte-mi</loc><priority>0.7</priority></url>
+  <url><loc>https://www.whippleelectricinc.com/lighting-installation-wyandotte-mi</loc><priority>0.7</priority></url>
+  <url><loc>https://www.whippleelectricinc.com/ceiling-fan-installation-wyandotte-mi</loc><priority>0.7</priority></url>
+  <url><loc>https://www.whippleelectricinc.com/electrical-safety-inspection-wyandotte-mi</loc><priority>0.7</priority></url>
+  <url><loc>https://www.whippleelectricinc.com/commercial-electrical-wyandotte-mi</loc><priority>0.7</priority></url>
+  <url><loc>https://www.whippleelectricinc.com/renovation-electrical-wyandotte-mi</loc><priority>0.7</priority></url>
+
+  <!-- Service-Location Landing Pages: Lincoln Park, MI -->
   <url><loc>https://www.whippleelectricinc.com/electrical-troubleshooting-lincoln-park-mi</loc><priority>0.7</priority></url>
+  <url><loc>https://www.whippleelectricinc.com/electrical-panel-upgrades-lincoln-park-mi</loc><priority>0.7</priority></url>
+  <url><loc>https://www.whippleelectricinc.com/circuit-breaker-repair-lincoln-park-mi</loc><priority>0.7</priority></url>
+  <url><loc>https://www.whippleelectricinc.com/electrical-wiring-lincoln-park-mi</loc><priority>0.7</priority></url>
+  <url><loc>https://www.whippleelectricinc.com/outlet-switch-installation-lincoln-park-mi</loc><priority>0.7</priority></url>
+  <url><loc>https://www.whippleelectricinc.com/lighting-installation-lincoln-park-mi</loc><priority>0.7</priority></url>
+  <url><loc>https://www.whippleelectricinc.com/ceiling-fan-installation-lincoln-park-mi</loc><priority>0.7</priority></url>
+  <url><loc>https://www.whippleelectricinc.com/electrical-safety-inspection-lincoln-park-mi</loc><priority>0.7</priority></url>
+  <url><loc>https://www.whippleelectricinc.com/commercial-electrical-lincoln-park-mi</loc><priority>0.7</priority></url>
+  <url><loc>https://www.whippleelectricinc.com/renovation-electrical-lincoln-park-mi</loc><priority>0.7</priority></url>
+
+  <!-- Service-Location Landing Pages: Trenton, MI -->
   <url><loc>https://www.whippleelectricinc.com/electrical-troubleshooting-trenton-mi</loc><priority>0.7</priority></url>
+  <url><loc>https://www.whippleelectricinc.com/electrical-panel-upgrades-trenton-mi</loc><priority>0.7</priority></url>
+  <url><loc>https://www.whippleelectricinc.com/circuit-breaker-repair-trenton-mi</loc><priority>0.7</priority></url>
+  <url><loc>https://www.whippleelectricinc.com/electrical-wiring-trenton-mi</loc><priority>0.7</priority></url>
+  <url><loc>https://www.whippleelectricinc.com/outlet-switch-installation-trenton-mi</loc><priority>0.7</priority></url>
+  <url><loc>https://www.whippleelectricinc.com/lighting-installation-trenton-mi</loc><priority>0.7</priority></url>
+  <url><loc>https://www.whippleelectricinc.com/ceiling-fan-installation-trenton-mi</loc><priority>0.7</priority></url>
+  <url><loc>https://www.whippleelectricinc.com/electrical-safety-inspection-trenton-mi</loc><priority>0.7</priority></url>
+  <url><loc>https://www.whippleelectricinc.com/commercial-electrical-trenton-mi</loc><priority>0.7</priority></url>
+  <url><loc>https://www.whippleelectricinc.com/renovation-electrical-trenton-mi</loc><priority>0.7</priority></url>
+
+  <!-- Service-Location Landing Pages: Detroit, MI -->
   <url><loc>https://www.whippleelectricinc.com/electrical-troubleshooting-detroit-mi</loc><priority>0.7</priority></url>
+  <url><loc>https://www.whippleelectricinc.com/electrical-panel-upgrades-detroit-mi</loc><priority>0.7</priority></url>
+  <url><loc>https://www.whippleelectricinc.com/circuit-breaker-repair-detroit-mi</loc><priority>0.7</priority></url>
+  <url><loc>https://www.whippleelectricinc.com/electrical-wiring-detroit-mi</loc><priority>0.7</priority></url>
+  <url><loc>https://www.whippleelectricinc.com/outlet-switch-installation-detroit-mi</loc><priority>0.7</priority></url>
+  <url><loc>https://www.whippleelectricinc.com/lighting-installation-detroit-mi</loc><priority>0.7</priority></url>
+  <url><loc>https://www.whippleelectricinc.com/ceiling-fan-installation-detroit-mi</loc><priority>0.7</priority></url>
+  <url><loc>https://www.whippleelectricinc.com/electrical-safety-inspection-detroit-mi</loc><priority>0.7</priority></url>
+  <url><loc>https://www.whippleelectricinc.com/commercial-electrical-detroit-mi</loc><priority>0.7</priority></url>
+  <url><loc>https://www.whippleelectricinc.com/renovation-electrical-detroit-mi</loc><priority>0.7</priority></url>
 </urlset>

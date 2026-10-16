@@ -150,6 +150,50 @@ export default function ServiceLocationPage({ slug }: { slug: string }) {
                   </div>
                 ))}
               </div>
+
+              {/* Service Checklist & Local Guarantee */}
+              <div className="mt-10 rounded-2xl border border-charcoal-200 bg-charcoal-50 p-6 sm:p-8">
+                <h3 className="font-display text-xl font-bold text-navy-900">
+                  What’s Included with Your {service.shortName} in {location.shortName}
+                </h3>
+                <p className="mt-1 text-sm text-charcoal-600">
+                  We treat your home with the highest level of care, adhering strictly to Michigan residential electrical codes.
+                </p>
+
+                <div className="mt-5 grid grid-cols-1 gap-3 sm:grid-cols-2 text-sm text-charcoal-700">
+                  <div className="flex items-start gap-2.5">
+                    <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-electric-100 text-xs font-bold text-electric-700">✓</span>
+                    <span>Direct diagnosis by a Master Electrician</span>
+                  </div>
+                  <div className="flex items-start gap-2.5">
+                    <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-electric-100 text-xs font-bold text-electric-700">✓</span>
+                    <span>Upfront estimate with zero hidden fees</span>
+                  </div>
+                  <div className="flex items-start gap-2.5">
+                    <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-electric-100 text-xs font-bold text-electric-700">✓</span>
+                    <span>100% Code-compliant materials & breakers</span>
+                  </div>
+                  <div className="flex items-start gap-2.5">
+                    <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-electric-100 text-xs font-bold text-electric-700">✓</span>
+                    <span>{location.shortName} municipal permits handled</span>
+                  </div>
+                  <div className="flex items-start gap-2.5">
+                    <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-electric-100 text-xs font-bold text-electric-700">✓</span>
+                    <span>Safety load testing on all affected circuits</span>
+                  </div>
+                  <div className="flex items-start gap-2.5">
+                    <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-electric-100 text-xs font-bold text-electric-700">✓</span>
+                    <span>Job site left completely clean and tidy</span>
+                  </div>
+                </div>
+
+                <div className="mt-6 border-t border-charcoal-200/80 pt-4 flex flex-wrap items-center justify-between gap-3 text-xs text-charcoal-600">
+                  <span>Serving {location.name} (Zip Codes: {location.zipCodes.join(', ')})</span>
+                  <a href={`tel:${business.phoneTel}`} className="font-bold text-electric-700 hover:underline">
+                    Call 313-590-6363 for Immediate Questions
+                  </a>
+                </div>
+              </div>
             </div>
 
             <div className="lg:col-span-1">

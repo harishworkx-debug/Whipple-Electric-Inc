@@ -260,6 +260,126 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* How We Work / 4-Step Process */}
+      <section className="section-padding bg-charcoal-50 border-t border-charcoal-100">
+        <div className="container-max px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto mb-14 max-w-2xl text-center">
+            <div className="mb-3 inline-flex items-center gap-2 rounded-full bg-electric-400/10 px-4 py-1.5">
+              <span className="text-sm font-semibold text-electric-700">Straightforward Experience</span>
+            </div>
+            <h2 className="font-display text-3xl font-bold text-navy-900 text-balance lg:text-4xl">
+              How We Handle Your Electrical Project
+            </h2>
+            <p className="mt-4 text-lg text-charcoal-600">
+              From your first phone call to final testing, here is what you can expect when working with Whipple Electric Inc.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+            {[
+              {
+                step: '01',
+                title: 'Initial Consultation',
+                desc: 'Call 313-590-6363 or request an estimate online. We listen to the issue and discuss convenient scheduling.',
+              },
+              {
+                step: '02',
+                title: 'Thorough Diagnostics',
+                desc: 'Master Electrician Jim Whipple evaluates your panel, circuits, and wiring with systematic precision.',
+              },
+              {
+                step: '03',
+                title: 'Clear Explanation & Estimate',
+                desc: 'We explain what is happening in plain English and give you clear repair options before starting.',
+              },
+              {
+                step: '04',
+                title: 'Code-Compliant Work',
+                desc: 'We complete the job cleanly, test every circuit for safety, and leave your home spotless.',
+              },
+            ].map((p, idx) => (
+              <div key={idx} className="relative rounded-2xl border border-charcoal-200/80 bg-white p-7 shadow-card">
+                <span className="font-display text-3xl font-black text-electric-500/80">{p.step}</span>
+                <h3 className="mt-3 font-display text-lg font-bold text-navy-900">{p.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-charcoal-600">{p.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Warning Signs Section */}
+      <section className="section-padding bg-white">
+        <div className="container-max px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto mb-12 max-w-2xl text-center">
+            <div className="mb-3 inline-flex items-center gap-2 rounded-full bg-amber-500/10 px-4 py-1.5">
+              <span className="text-sm font-semibold text-amber-700">Electrical Safety Alert</span>
+            </div>
+            <h2 className="font-display text-3xl font-bold text-navy-900 text-balance lg:text-4xl">
+              Signs Your Home Needs an Electrician
+            </h2>
+            <p className="mt-4 text-lg text-charcoal-600">
+              Electrical problems rarely fix themselves and can become fire hazards. If you notice any of these signs, contact us right away.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {[
+              {
+                title: 'Frequently Tripping Breakers',
+                desc: 'If a breaker trips repeatedly when running appliances, the circuit is either overloaded, shorted, or the breaker has degraded.',
+              },
+              {
+                title: 'Flickering or Dimming Lights',
+                desc: 'Lights that dim when your air conditioner or microwave turns on often indicate voltage drop or loose neutral wiring.',
+              },
+              {
+                title: 'Warm or Discolored Outlets',
+                desc: 'Faceplates that feel warm or show black/brown discoloration indicate severe internal arcing and require urgent attention.',
+              },
+              {
+                title: 'Burning Smell or Buzzing Sounds',
+                desc: 'A fishy or plastic burning odor near a panel or wall switch signals melting wire insulation. Turn off the main breaker and call.',
+              },
+              {
+                title: 'Two-Prong Ungrounded Outlets',
+                desc: 'Older mid-century homes often have ungrounded receptacles that cannot safely handle modern electronics, computers, and appliances.',
+              },
+              {
+                title: 'Outdated Fuse Boxes or 60A Service',
+                desc: 'Homes with fuse boxes or older panels (like Federal Pacific or Zinsco) cannot meet contemporary electrical demands safely.',
+              },
+            ].map((sign, i) => (
+              <div key={i} className="flex gap-4 rounded-xl border border-charcoal-100 bg-charcoal-50 p-6">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-red-100 text-red-600">
+                  <Zap className="h-5 w-5" />
+                </div>
+                <div>
+                  <h3 className="font-display text-base font-bold text-navy-900">{sign.title}</h3>
+                  <p className="mt-1 text-sm text-charcoal-600">{sign.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-10 rounded-2xl bg-navy-900 p-8 text-center sm:p-10">
+            <h3 className="font-display text-2xl font-bold text-white">Suspect an Electrical Hazard in Your Downriver Home?</h3>
+            <p className="mx-auto mt-2 max-w-xl text-charcoal-300">
+              Do not take risks with household wiring. Whipple Electric Inc provides honest, expert safety inspections and repairs.
+            </p>
+            <div className="mt-6 flex flex-wrap justify-center gap-4">
+              <a href={`tel:${business.phoneTel}`} className="btn-primary">
+                <Phone className="h-5 w-5" />
+                Call {business.phone}
+              </a>
+              <Link to="/request-an-estimate" className="btn-outline-white">
+                Request an Inspection
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Service Area Preview */}
       <section className="section-padding bg-charcoal-50">
         <div className="container-max px-4 sm:px-6 lg:px-8">
@@ -295,6 +415,55 @@ export default function HomePage() {
               View All Service Areas
               <ArrowRight className="h-5 w-5" />
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Frequently Asked Questions */}
+      <section className="section-padding bg-white">
+        <div className="container-max px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto mb-12 max-w-2xl text-center">
+            <div className="mb-3 inline-flex items-center gap-2 rounded-full bg-electric-400/10 px-4 py-1.5">
+              <span className="text-sm font-semibold text-electric-700">Homeowner Questions</span>
+            </div>
+            <h2 className="font-display text-3xl font-bold text-navy-900 text-balance lg:text-4xl">
+              Frequently Asked Questions
+            </h2>
+            <p className="mt-4 text-lg text-charcoal-600">
+              Common questions about hiring Whipple Electric Inc for your residential electrical projects.
+            </p>
+          </div>
+
+          <div className="mx-auto max-w-3xl space-y-4">
+            {[
+              {
+                q: 'Are you licensed and insured in Michigan?',
+                a: 'Yes, Whipple Electric Inc is fully insured and operated by a Michigan Master Electrician with over 40 years of hands-on experience.',
+              },
+              {
+                q: 'How quickly can you come out for electrical troubleshooting?',
+                a: 'We understand that electrical issues disrupt your household. We offer prompt scheduling and 24-hour availability to address urgent electrical concerns across Taylor and Downriver.',
+              },
+              {
+                q: 'Do you handle city electrical permits and inspections?',
+                a: 'Yes. For projects that require municipal permits — such as main panel upgrades and major rewiring — we handle the permit application and coordinate with local city building inspectors.',
+              },
+              {
+                q: 'Can you upgrade my older home from a 100-amp to 200-amp panel?',
+                a: 'Absolutely. Many Downriver homes built in the 1950s–1970s have 60-amp or 100-amp panels that struggle with modern loads (EV chargers, central AC, modern kitchens). We specialize in 200-amp service upgrades.',
+              },
+              {
+                q: 'How do you charge for electrical work?',
+                a: 'We believe in straightforward, transparent pricing. We assess your project on-site, explain what needs to be done, and provide a clear estimate before work begins so there are no surprises.',
+              },
+            ].map((faq, i) => (
+              <details key={i} className="group rounded-xl border border-charcoal-200 bg-charcoal-50/50 p-5 transition-all open:bg-white open:shadow-card">
+                <summary className="cursor-pointer font-display text-base font-bold text-navy-900 marker:hidden">
+                  {faq.q}
+                </summary>
+                <p className="mt-3 text-sm leading-relaxed text-charcoal-700">{faq.a}</p>
+              </details>
+            ))}
           </div>
         </div>
       </section>
