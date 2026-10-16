@@ -13,7 +13,7 @@ export default function ServiceCard({ service, variant = 'light' }: ServiceCardP
 
   if (variant === 'dark') {
     return (
-      <Link to={`/${service.slug}`} className="card-navy group block">
+      <Link to={`/${service.slug}-taylor-mi`} className="card-navy group block">
         <div className="card-icon mb-4 bg-electric-400/15 text-electric-400 group-hover:bg-electric-400 group-hover:text-navy-900">
           <Icon className="h-7 w-7" />
         </div>
@@ -28,7 +28,7 @@ export default function ServiceCard({ service, variant = 'light' }: ServiceCardP
   }
 
   return (
-    <Link to={`/${service.slug}`} className="card group block">
+    <Link to={`/${service.slug}-taylor-mi`} className="card group block">
       <div className="card-icon mb-4 group-hover:bg-electric-400 group-hover:text-navy-900">
         <Icon className="h-7 w-7" />
       </div>

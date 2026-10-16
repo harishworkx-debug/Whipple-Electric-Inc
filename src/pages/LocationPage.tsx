@@ -44,7 +44,7 @@ export default function LocationPage({ slug }: { slug: string }) {
                 <Phone className="h-5 w-5" />
                 Call {business.phone}
               </a>
-              <Link to="/request-an-estimate" className="btn-secondary border-white/20 text-white hover:border-electric-400 hover:text-electric-400">
+              <Link to="/request-an-estimate" className="btn-outline-white">
                 Request an Estimate
               </Link>
             </div>

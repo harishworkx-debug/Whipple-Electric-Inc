@@ -39,6 +39,10 @@
     @apply inline-flex items-center justify-center gap-2 rounded-lg bg-navy-800 px-6 py-3.5 text-base font-semibold text-white transition-all duration-300 hover:bg-navy-700 hover:shadow-navy focus:outline-none focus:ring-4 focus:ring-navy-500/20 active:scale-[0.98];
   }
 
+  .btn-outline-white {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg border-2 border-white/20 bg-navy-800/80 px-6 py-3.5 text-base font-semibold text-white transition-all duration-300 hover:border-electric-400 hover:text-electric-400 hover:bg-navy-800 active:scale-[0.98];
+  }
+
   .btn-ghost {
     @apply inline-flex items-center justify-center gap-2 rounded-lg px-5 py-2.5 text-sm font-semibold text-navy-800 transition-all duration-300 hover:bg-navy-50 focus:outline-none focus:ring-4 focus:ring-navy-500/15;
   }

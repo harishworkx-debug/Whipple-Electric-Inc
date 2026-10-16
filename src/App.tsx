@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
@@ -68,12 +68,12 @@ function AppRoutes() {
         ))
       )}
 
-      {/* Individual service pages: /{service-slug} — must come after combos */}
+      {/* Generic service routes redirect to the main location (Taylor, MI) */}
       {serviceSlugs.map((svcSlug) => (
         <Route
-          key={`svc-${svcSlug}`}
+          key={`svc-redirect-${svcSlug}`}
           path={`/${svcSlug}`}
-          element={<ServiceDetailPage slug={svcSlug} />}
+          element={<Navigate to={`/${svcSlug}-taylor-mi`} replace />}
         />
       ))}
 

@@ -90,10 +90,15 @@ export default function AboutPage() {
             <StarRating rating={business.rating} size="lg" />
             <div className="mt-3 font-display text-4xl font-bold text-white">{business.rating}/5</div>
             <p className="mt-2 text-charcoal-300">Based on {business.reviewCount} Google reviews</p>
-            <a href={business.googleMapsLink} target="_blank" rel="noopener noreferrer" className="mt-6 inline-flex items-center gap-2 font-semibold text-electric-400 hover:text-electric-300">
-              <Star className="h-5 w-5" />
-              Read Reviews on Google
-            </a>
+            <div className="mt-6 flex flex-wrap items-center justify-center gap-4">
+              <Link to="/reviews" className="btn-primary text-sm">
+                <Star className="h-4 w-4" />
+                Read Verified Reviews ({business.reviewCount})
+              </Link>
+              <a href={business.googleMapsLink} target="_blank" rel="noopener noreferrer" className="btn-outline-white text-sm">
+                View Google Listing
+              </a>
+            </div>
           </div>
         </div>
       </section>

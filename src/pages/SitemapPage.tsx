@@ -45,7 +45,7 @@ export default function SitemapPage() {
               <h2 className="font-display text-lg font-bold text-navy-900 mb-4">Electrical Services</h2>
               <ul className="space-y-2">
                 {services.map((s) => (
-                  <li key={s.slug}><Link to={`/${s.slug}`} className="text-charcoal-600 hover:text-electric-600">{s.name}</Link></li>
+                  <li key={s.slug}><Link to={`/${s.slug}-taylor-mi`} className="text-charcoal-600 hover:text-electric-600">{s.name}</Link></li>
                 ))}
               </ul>
             </div>
@@ -57,6 +57,23 @@ export default function SitemapPage() {
                   <li key={l.slug}><Link to={`/electrician-${l.slug}`} className="text-charcoal-600 hover:text-electric-600">{l.name}</Link></li>
                 ))}
               </ul>
+            </div>
+          </div>
+
+          <div className="mt-12 pt-8 border-t border-charcoal-100">
+            <h2 className="font-display text-lg font-bold text-navy-900 mb-4">Popular Service Locations</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 text-sm">
+              {services.slice(0, 4).map((s) =>
+                locations.slice(0, 6).map((l) => (
+                  <Link
+                    key={`${s.slug}-${l.slug}`}
+                    to={`/${s.slug}-${l.slug}`}
+                    className="text-charcoal-600 hover:text-electric-600 py-1"
+                  >
+                    {s.shortName} in {l.shortName}
+                  </Link>
+                ))
+              )}
             </div>
           </div>
         </div>

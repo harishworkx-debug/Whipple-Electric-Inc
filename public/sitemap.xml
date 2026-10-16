@@ -1,13 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Core Pages -->
   <url><loc>https://www.whippleelectricinc.com/</loc><priority>1.0</priority></url>
   <url><loc>https://www.whippleelectricinc.com/services</loc><priority>0.9</priority></url>
   <url><loc>https://www.whippleelectricinc.com/service-areas</loc><priority>0.9</priority></url>
   <url><loc>https://www.whippleelectricinc.com/about</loc><priority>0.7</priority></url>
-  <url><loc>https://www.whippleelectricinc.com/reviews</loc><priority>0.7</priority></url>
+  <url><loc>https://www.whippleelectricinc.com/reviews</loc><priority>0.8</priority></url>
   <url><loc>https://www.whippleelectricinc.com/contact</loc><priority>0.8</priority></url>
   <url><loc>https://www.whippleelectricinc.com/request-an-estimate</loc><priority>0.9</priority></url>
   <url><loc>https://www.whippleelectricinc.com/privacy-policy</loc><priority>0.3</priority></url>
   <url><loc>https://www.whippleelectricinc.com/terms-and-conditions</loc><priority>0.3</priority></url>
   <url><loc>https://www.whippleelectricinc.com/sitemap</loc><priority>0.3</priority></url>
+
+  <!-- Service Pages (Main Location: Taylor, MI) -->
+  <url><loc>https://www.whippleelectricinc.com/electrical-troubleshooting-taylor-mi</loc><priority>0.8</priority></url>
+  <url><loc>https://www.whippleelectricinc.com/electrical-panel-upgrades-taylor-mi</loc><priority>0.8</priority></url>
+  <url><loc>https://www.whippleelectricinc.com/circuit-breaker-repair-taylor-mi</loc><priority>0.8</priority></url>
+  <url><loc>https://www.whippleelectricinc.com/electrical-wiring-taylor-mi</loc><priority>0.8</priority></url>
+  <url><loc>https://www.whippleelectricinc.com/outlet-switch-installation-taylor-mi</loc><priority>0.8</priority></url>
+  <url><loc>https://www.whippleelectricinc.com/lighting-installation-taylor-mi</loc><priority>0.8</priority></url>
+  <url><loc>https://www.whippleelectricinc.com/ceiling-fan-installation-taylor-mi</loc><priority>0.8</priority></url>
+  <url><loc>https://www.whippleelectricinc.com/electrical-safety-inspection-taylor-mi</loc><priority>0.8</priority></url>
+  <url><loc>https://www.whippleelectricinc.com/commercial-electrical-taylor-mi</loc><priority>0.8</priority></url>
+  <url><loc>https://www.whippleelectricinc.com/renovation-electrical-taylor-mi</loc><priority>0.8</priority></url>
+
+  <!-- Service Area Hub Pages -->
+  <url><loc>https://www.whippleelectricinc.com/electrician-taylor-mi</loc><priority>0.8</priority></url>
+  <url><loc>https://www.whippleelectricinc.com/electrician-southgate-mi</loc><priority>0.8</priority></url>
+  <url><loc>https://www.whippleelectricinc.com/electrician-allen-park-mi</loc><priority>0.8</priority></url>
+  <url><loc>https://www.whippleelectricinc.com/electrician-dearborn-mi</loc><priority>0.8</priority></url>
+  <url><loc>https://www.whippleelectricinc.com/electrician-dearborn-heights-mi</loc><priority>0.8</priority></url>
+  <url><loc>https://www.whippleelectricinc.com/electrician-romulus-mi</loc><priority>0.8</priority></url>
+  <url><loc>https://www.whippleelectricinc.com/electrician-wyandotte-mi</loc><priority>0.8</priority></url>
+  <url><loc>https://www.whippleelectricinc.com/electrician-lincoln-park-mi</loc><priority>0.8</priority></url>
+  <url><loc>https://www.whippleelectricinc.com/electrician-trenton-mi</loc><priority>0.8</priority></url>
+  <url><loc>https://www.whippleelectricinc.com/electrician-detroit-mi</loc><priority>0.8</priority></url>
+
+  <!-- Other Service-Location Landing Pages -->
+
+  <url><loc>https://www.whippleelectricinc.com/electrical-troubleshooting-southgate-mi</loc><priority>0.7</priority></url>
+  <url><loc>https://www.whippleelectricinc.com/electrical-panel-upgrades-southgate-mi</loc><priority>0.7</priority></url>
+  <url><loc>https://www.whippleelectricinc.com/circuit-breaker-repair-southgate-mi</loc><priority>0.7</priority></url>
+  <url><loc>https://www.whippleelectricinc.com/electrical-wiring-southgate-mi</loc><priority>0.7</priority></url>
+  <url><loc>https://www.whippleelectricinc.com/lighting-installation-southgate-mi</loc><priority>0.7</priority></url>
+
+  <url><loc>https://www.whippleelectricinc.com/electrical-troubleshooting-dearborn-mi</loc><priority>0.7</priority></url>
+  <url><loc>https://www.whippleelectricinc.com/electrical-panel-upgrades-dearborn-mi</loc><priority>0.7</priority></url>
+  <url><loc>https://www.whippleelectricinc.com/electrical-wiring-dearborn-mi</loc><priority>0.7</priority></url>
+  <url><loc>https://www.whippleelectricinc.com/lighting-installation-dearborn-mi</loc><priority>0.7</priority></url>
+
+  <url><loc>https://www.whippleelectricinc.com/electrical-troubleshooting-allen-park-mi</loc><priority>0.7</priority></url>
+  <url><loc>https://www.whippleelectricinc.com/electrical-panel-upgrades-allen-park-mi</loc><priority>0.7</priority></url>
+  <url><loc>https://www.whippleelectricinc.com/electrical-troubleshooting-romulus-mi</loc><priority>0.7</priority></url>
+  <url><loc>https://www.whippleelectricinc.com/electrical-troubleshooting-wyandotte-mi</loc><priority>0.7</priority></url>
+  <url><loc>https://www.whippleelectricinc.com/electrical-troubleshooting-lincoln-park-mi</loc><priority>0.7</priority></url>
+  <url><loc>https://www.whippleelectricinc.com/electrical-troubleshooting-trenton-mi</loc><priority>0.7</priority></url>
+  <url><loc>https://www.whippleelectricinc.com/electrical-troubleshooting-detroit-mi</loc><priority>0.7</priority></url>
 </urlset>

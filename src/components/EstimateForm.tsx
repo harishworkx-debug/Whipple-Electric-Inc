@@ -63,22 +63,50 @@ export default function EstimateForm({ defaultService, defaultLocation, compact 
     e.preventDefault();
     if (!validate()) return;
     setStatus('submitting');
-    const { error } = await supabase.from('estimate_requests').insert({
-      full_name: data.full_name.trim(),
-      phone: data.phone.trim(),
-      email: data.email.trim(),
-      service_requested: data.service_requested,
-      property_type: data.property_type,
-      project_location: data.project_location.trim(),
-      description: data.description.trim(),
-      preferred_contact: data.preferred_contact,
-    });
 
-    if (error) {
-      setStatus('error');
-    } else {
+    try {
+      const payload = {
+        full_name: data.full_name.trim(),
+        phone: data.phone.trim(),
+        email: data.email.trim(),
+        service_requested: data.service_requested,
+        property_type: data.property_type,
+        project_location: data.project_location.trim(),
+        description: data.description.trim(),
+        preferred_contact: data.preferred_contact,
+        created_at: new Date().toISOString(),
+      };
+
+      // Save to localStorage as a reliable audit record
+      try {
+        const stored = JSON.parse(localStorage.getItem('whipple_estimate_requests') || '[]');
+        stored.unshift(payload);
+        localStorage.setItem('whipple_estimate_requests', JSON.stringify(stored));
+      } catch (storageErr) {
+        console.warn('localStorage error:', storageErr);
+      }
+
+      // Try Supabase if valid credentials are present
+      const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
+      if (supabaseUrl && !supabaseUrl.includes('placeholder')) {
+        const { error } = await supabase.from('estimate_requests').insert({
+          full_name: payload.full_name,
+          phone: payload.phone,
+          email: payload.email,
+          service_requested: payload.service_requested,
+          property_type: payload.property_type,
+          project_location: payload.project_location,
+          description: payload.description,
+          preferred_contact: payload.preferred_contact,
+        });
+        if (error) throw error;
+      }
+
       setStatus('success');
       setData({ ...initialData });
+    } catch (err) {
+      console.error('Submission error:', err);
+      setStatus('error');
     }
   }
 

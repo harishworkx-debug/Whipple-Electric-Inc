@@ -7,10 +7,12 @@ import SEO from '@/components/SEO';
 import CTASection from '@/components/CTASection';
 import ServiceCard from '@/components/ServiceCard';
 import StarRating from '@/components/StarRating';
+import ReviewCard from '@/components/ReviewCard';
 import { business } from '@/data/business';
 import { services } from '@/data/services';
 import { locations } from '@/data/locations';
 import { images } from '@/data/images';
+import { reviews } from '@/data/reviews';
 import { getLocalBusinessSchema } from '@/data/schema';
 
 export default function HomePage() {
@@ -54,7 +56,7 @@ export default function HomePage() {
                 <Phone className="h-5 w-5" />
                 Call {business.phone}
               </a>
-              <Link to="/request-an-estimate" className="btn-secondary w-full border-white/20 text-white hover:border-electric-400 hover:text-electric-400 sm:w-auto">
+              <Link to="/request-an-estimate" className="btn-outline-white w-full sm:w-auto">
                 Request an Estimate
               </Link>
             </div>
@@ -215,40 +217,45 @@ export default function HomePage() {
           <div className="mx-auto mb-12 max-w-2xl text-center">
             <div className="mb-3 inline-flex items-center gap-2 rounded-full bg-electric-400/10 px-4 py-1.5">
               <Star className="h-4 w-4 text-electric-400" />
-              <span className="text-sm font-semibold text-electric-400">Customer Reviews</span>
+              <span className="text-sm font-semibold text-electric-400">Verified Google Reviews</span>
             </div>
             <h2 className="font-display text-3xl font-bold text-white text-balance lg:text-4xl">
-              Trusted by Homeowners in Taylor and Beyond
+              Trusted by Homeowners Across Downriver
             </h2>
-            <div className="mt-6 flex items-center justify-center gap-4">
+            <div className="mt-5 flex items-center justify-center gap-3">
               <StarRating rating={business.rating} size="lg" />
               <span className="font-display text-3xl font-bold text-white">{business.rating}</span>
               <span className="text-charcoal-300">/ 5</span>
             </div>
-            <p className="mt-2 text-charcoal-300">Based on {business.reviewCount} Google reviews</p>
+            <p className="mt-2 text-sm text-charcoal-300">
+              Based on {business.reviewCount} authentic Google reviews &bull; Master Electrician Jim Whipple
+            </p>
           </div>
 
-          <div className="mx-auto max-w-3xl rounded-2xl border border-navy-700 bg-navy-800 p-8 text-center">
-            <StarRating rating={business.rating} size="md" />
-            <p className="mt-4 text-lg leading-relaxed text-charcoal-200">
-              We value every customer's feedback. Visit our Google listing to read what homeowners in the Taylor area have to say about working with Whipple Electric Inc.
-            </p>
+          {/* Featured reviews grid */}
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {reviews
+              .filter((r) => r.rating === 5 && r.featured)
+              .slice(0, 6)
+              .map((review) => (
+                <ReviewCard key={review.id} review={review} featuredStyle={true} />
+              ))}
+          </div>
+
+          <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4">
+            <Link to="/reviews" className="btn-primary w-full sm:w-auto">
+              Read All {business.reviewCount} Verified Reviews
+              <ArrowRight className="h-4 w-4" />
+            </Link>
             <a
               href={business.googleMapsLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-6 inline-flex items-center gap-2 font-semibold text-electric-400 transition-colors hover:text-electric-300"
+              className="btn-outline-white w-full sm:w-auto"
             >
-              Read Reviews on Google
+              Write a Google Review
               <ArrowRight className="h-4 w-4" />
             </a>
-          </div>
-
-          <div className="mt-8 text-center">
-            <Link to="/reviews" className="btn-secondary border-white/20 text-white hover:border-electric-400 hover:text-electric-400">
-              View Reviews Page
-              <ArrowRight className="h-5 w-5" />
-            </Link>
           </div>
         </div>
       </section>

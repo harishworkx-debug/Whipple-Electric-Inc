@@ -25,7 +25,7 @@ export default function NotFoundPage() {
                 <Home className="h-5 w-5" />
                 Back to Home
               </Link>
-              <a href={`tel:${business.phoneTel}`} className="btn-secondary border-white/20 text-white hover:border-electric-400 hover:text-electric-400">
+              <a href={`tel:${business.phoneTel}`} className="btn-outline-white">
                 <Phone className="h-5 w-5" />
                 Call {business.phone}
               </a>

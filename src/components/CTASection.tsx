@@ -32,7 +32,7 @@ export default function CTASection({
               <Phone className="h-5 w-5" />
               Call {business.phone}
             </a>
-            <Link to="/request-an-estimate" className="btn-secondary w-full border-white/20 text-white hover:border-electric-400 hover:text-electric-400 sm:w-auto">
+            <Link to="/request-an-estimate" className="btn-outline-white w-full sm:w-auto">
               Request an Estimate
             </Link>
           </div>

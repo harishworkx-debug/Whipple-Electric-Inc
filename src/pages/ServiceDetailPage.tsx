@@ -47,7 +47,7 @@ export default function ServiceDetailPage({ slug }: { slug: string }) {
                   <Phone className="h-5 w-5" />
                   Call {business.phone}
                 </a>
-                <Link to="/request-an-estimate" className="btn-secondary border-white/20 text-white hover:border-electric-400 hover:text-electric-400">
+                <Link to="/request-an-estimate" className="btn-outline-white">
                   Request an Estimate
                 </Link>
               </div>
@@ -147,7 +147,7 @@ export default function ServiceDetailPage({ slug }: { slug: string }) {
                   </div>
                   <h3 className="font-display text-base font-bold text-navy-900">{s.shortName}</h3>
                   <span className="mt-2 inline-flex items-center gap-1 text-sm font-semibold text-navy-700 group-hover:text-electric-600">
-                    Learn More <ArrowRight className="h-4 w-4" />
+                    View {s.shortName} <ArrowRight className="h-4 w-4" />
                   </span>
                 </Link>
               );

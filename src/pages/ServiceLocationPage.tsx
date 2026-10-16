@@ -1,5 +1,5 @@
 import { Link, Navigate } from 'react-router-dom';
-import { Phone, ArrowRight, HelpCircle } from 'lucide-react';
+import { Phone, ArrowRight, HelpCircle, CheckCircle2 } from 'lucide-react';
 import SEO from '@/components/SEO';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import CTASection from '@/components/CTASection';
@@ -39,14 +39,22 @@ export default function ServiceLocationPage({ slug }: { slug: string }) {
     ...location.faqs.slice(0, 1),
   ];
 
+  const isMainLocation = location.slug === 'taylor-mi';
+  const breadcrumbItems = isMainLocation
+    ? [
+        { name: 'Services', path: '/services' },
+        { name: service.shortName, path: `/${service.slug}-taylor-mi` },
+      ]
+    : [
+        { name: 'Services', path: '/services' },
+        { name: service.shortName, path: `/${service.slug}-taylor-mi` },
+        { name: location.shortName, path: `/${service.slug}-${location.slug}` },
+      ];
+
   const schema = [
     getServiceLocationSchema(service.name, location.name, `${service.description} in ${location.name}`, slug),
     getFAQSchema(combinedFaqs),
-    getBreadcrumbSchema([
-      { name: 'Services', path: '/services' },
-      { name: service.shortName, path: `/${service.slug}` },
-      { name: location.shortName, path: `/${service.slug}-${location.slug}` },
-    ]),
+    getBreadcrumbSchema(breadcrumbItems),
   ];
 
   const relatedServices = services.filter((s) => s.slug !== service.slug).slice(0, 4);
@@ -60,11 +68,7 @@ export default function ServiceLocationPage({ slug }: { slug: string }) {
         canonical={`/${service.slug}-${location.slug}`}
         structuredData={schema}
       />
-      <Breadcrumbs items={[
-        { name: 'Services', path: '/services' },
-        { name: service.shortName, path: `/${service.slug}` },
-        { name: location.shortName, path: `/${service.slug}-${location.slug}` },
-      ]} />
+      <Breadcrumbs items={breadcrumbItems} />
 
       <section className="bg-navy-900 py-14 lg:py-20">
         <div className="container-max px-4 sm:px-6 lg:px-8">
@@ -84,7 +88,7 @@ export default function ServiceLocationPage({ slug }: { slug: string }) {
                   <Phone className="h-5 w-5" />
                   Call {business.phone}
                 </a>
-                <Link to="/request-an-estimate" className="btn-secondary border-white/20 text-white hover:border-electric-400 hover:text-electric-400">
+                <Link to="/request-an-estimate" className="btn-outline-white">
                   Request an Estimate
                 </Link>
               </div>
@@ -104,6 +108,20 @@ export default function ServiceLocationPage({ slug }: { slug: string }) {
                 {service.shortName} in {location.shortName}
               </h2>
               <p className="mt-4 text-lg leading-relaxed text-charcoal-700">{service.longDescription}</p>
+
+              {service.benefits && service.benefits.length > 0 && (
+                <>
+                  <h3 className="mt-8 font-display text-xl font-bold text-navy-900">Key Benefits</h3>
+                  <ul className="mt-4 space-y-2.5">
+                    {service.benefits.map((benefit, i) => (
+                      <li key={i} className="flex items-start gap-3">
+                        <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-electric-600" />
+                        <span className="text-charcoal-700">{benefit}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </>
+              )}
 
               <h3 className="mt-8 font-display text-xl font-bold text-navy-900">Serving {location.shortName} Homeowners</h3>
               <p className="mt-3 text-charcoal-700">{location.description}</p>

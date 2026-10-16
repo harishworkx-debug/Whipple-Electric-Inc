@@ -1,4 +1,5 @@
 import { business } from '@/data/business';
+import { reviews } from '@/data/reviews';
 
 export function getLocalBusinessSchema() {
   return {
@@ -39,6 +40,18 @@ export function getLocalBusinessSchema() {
       ratingValue: business.rating.toString(),
       reviewCount: business.reviewCount.toString(),
     },
+    review: reviews.slice(0, 5).map((r) => ({
+      '@type': 'Review',
+      author: {
+        '@type': 'Person',
+        name: r.author,
+      },
+      reviewRating: {
+        '@type': 'Rating',
+        ratingValue: r.rating.toString(),
+      },
+      reviewBody: r.text,
+    })),
     openingHours: 'Mo-Su 00:00-24:00',
     sameAs: [business.social.facebook],
   };
