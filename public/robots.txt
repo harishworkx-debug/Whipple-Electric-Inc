@@ -1,4 +1,17 @@
+# robots.txt for Whipple Electric Inc
+# Website: https://www.whippleelectricinc.com/
+
 User-agent: *
 Allow: /
 
+# Googlebot specific rules
+User-agent: Googlebot
+Allow: /
+
+# Bingbot specific rules
+User-agent: Bingbot
+Allow: /
+
+# XML Sitemap Location
 Sitemap: https://www.whippleelectricinc.com/sitemap.xml
+Host: https://www.whippleelectricinc.com

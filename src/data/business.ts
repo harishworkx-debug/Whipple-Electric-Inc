@@ -4,7 +4,7 @@ export const business = {
   phoneTel: '+13135906363',
   altPhone: '734-946-4888',
   website: 'https://www.whippleelectricinc.com/',
-  googleMapsLink: 'https://maps.app.goo.gl/DLRBy1qQo32s1taB9',
+  googleMapsLink: 'https://maps.app.goo.gl/gcPuwGGF86arCXNPA',
   googleMapsEmbed:
     'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12489699.881484026!2d-112.09533051923647!3d40.15914004321006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x883b48753f2a8f09%3A0x5d38a17de930b40a!2sWhipple%20Electric%20Inc!5e0!3m2!1sen!2sin!4v1792149087715!5m2!1sen!2sin',
   rating: 4.3,

@@ -1,5 +1,5 @@
 import { Link, Navigate } from 'react-router-dom';
-import { Phone, MapPin, ArrowRight } from 'lucide-react';
+import { Phone, MapPin, ArrowRight, ShieldCheck, Award, Clock, CheckCircle2 } from 'lucide-react';
 import SEO from '@/components/SEO';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import CTASection from '@/components/CTASection';
@@ -15,8 +15,16 @@ export default function LocationPage({ slug }: { slug: string }) {
 
   if (!location) return <Navigate to="/404" replace />;
 
+  const isTaylor = location.slug === 'taylor-mi';
   const nearbyLocations = locations.filter((l) => l.slug !== location.slug).slice(0, 4);
-  const schema = [getLocalBusinessSchema(), getFAQSchema(location.faqs), getBreadcrumbSchema([{ name: 'Service Areas', path: '/service-areas' }, { name: location.shortName, path: `/electrician-${location.slug}` }])];
+  const schema = [
+    getLocalBusinessSchema(),
+    getFAQSchema(location.faqs),
+    getBreadcrumbSchema([
+      { name: 'Service Areas', path: '/service-areas' },
+      { name: location.shortName, path: `/electrician-${location.slug}` },
+    ]),
+  ];
 
   return (
     <>
@@ -33,7 +41,11 @@ export default function LocationPage({ slug }: { slug: string }) {
           <div className="mx-auto max-w-3xl text-center">
             <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-electric-400/10 px-4 py-1.5">
               <MapPin className="h-5 w-5 text-electric-400" />
-              <span className="text-sm font-semibold text-electric-400">Service Area</span>
+              <span className="text-sm font-semibold text-electric-400">
+                {isTaylor
+                  ? 'Headquarters: 14800 Burr St, Taylor, MI'
+                  : `Service Area Coverage &bull; Dispatched from Taylor, MI Base`}
+              </span>
             </div>
             <h1 className="font-display text-4xl font-bold text-white text-balance lg:text-5xl">
               Electrician in {location.name}

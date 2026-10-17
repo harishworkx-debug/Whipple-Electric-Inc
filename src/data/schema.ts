@@ -1,6 +1,8 @@
 import { business } from '@/data/business';
 import { reviews } from '@/data/reviews';
 
+const CANONICAL_URL = 'https://www.whippleelectricinc.com';
+
 export function getLocalBusinessSchema() {
   return {
     '@context': 'https://schema.org',
@@ -8,7 +10,7 @@ export function getLocalBusinessSchema() {
     name: business.name,
     telephone: business.phoneTel,
     url: business.website,
-    image: `${window.location.origin}/favicon.svg`,
+    image: `${CANONICAL_URL}/favicon.svg`,
     priceRange: '$$',
     address: {
       '@type': 'PostalAddress',
@@ -53,7 +55,7 @@ export function getLocalBusinessSchema() {
       reviewBody: r.text,
     })),
     openingHours: 'Mo-Su 00:00-24:00',
-    sameAs: [business.social.facebook],
+    sameAs: [business.social.facebook, business.googleMapsLink],
   };
 }
 
@@ -68,7 +70,7 @@ export function getServiceSchema(serviceName: string, description: string, slug:
       name: business.name,
       telephone: business.phoneTel,
     },
-    url: `${window.location.origin}/${slug}`,
+    url: `${CANONICAL_URL}/${slug}`,
     areaServed: {
       '@type': 'City',
       name: 'Taylor, MI',
@@ -87,7 +89,7 @@ export function getServiceLocationSchema(serviceName: string, locationName: stri
       name: business.name,
       telephone: business.phoneTel,
     },
-    url: `${window.location.origin}/${slug}`,
+    url: `${CANONICAL_URL}/${slug}`,
     areaServed: {
       '@type': 'City',
       name: locationName,
@@ -118,7 +120,7 @@ export function getBreadcrumbSchema(items: { name: string; path: string }[]) {
       '@type': 'ListItem',
       position: (index + 1).toString(),
       name: item.name,
-      item: `${window.location.origin}${item.path}`,
+      item: `${CANONICAL_URL}${item.path.startsWith('/') ? item.path : '/' + item.path}`,
     })),
   };
 }

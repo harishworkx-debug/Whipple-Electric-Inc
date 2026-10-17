@@ -102,6 +102,33 @@ export default function EstimateForm({ defaultService, defaultLocation, compact 
         if (error) throw error;
       }
 
+      // Conversion tracking: Push to dataLayer / gtag for GTM and Google Ads, and dispatch custom event
+      try {
+        if (typeof window !== 'undefined') {
+          const win = window as any;
+          if (Array.isArray(win.dataLayer)) {
+            win.dataLayer.push({
+              event: 'generate_lead',
+              form_name: 'estimate_request',
+              service: payload.service_requested,
+              location: payload.project_location,
+            });
+          }
+          if (typeof win.gtag === 'function') {
+            win.gtag('event', 'generate_lead', {
+              event_category: 'form_submission',
+              event_label: payload.service_requested,
+              value: 1,
+            });
+          }
+          window.dispatchEvent(
+            new CustomEvent('estimate_submitted', { detail: payload })
+          );
+        }
+      } catch (trackErr) {
+        console.warn('Analytics tracking error:', trackErr);
+      }
+
       setStatus('success');
       setData({ ...initialData });
     } catch (err) {
@@ -112,14 +139,21 @@ export default function EstimateForm({ defaultService, defaultLocation, compact 
 
   if (status === 'success') {
     return (
-      <div className="rounded-xl border border-green-200 bg-green-50 p-8 text-center">
+      <div className="rounded-xl border border-green-200 bg-green-50 p-8 text-center animate-fade-in">
         <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-green-100">
           <CheckCircle2 className="h-8 w-8 text-green-600" />
         </div>
         <h3 className="mt-4 font-display text-xl font-bold text-navy-900">Estimate Request Received</h3>
-        <p className="mt-2 text-charcoal-600">
-          Thank you for reaching out to Whipple Electric Inc. We have received your request and will contact you to discuss your project and arrange service.
+        <p className="mt-2 text-charcoal-700 max-w-lg mx-auto">
+          Thank you for reaching out to Whipple Electric Inc. Master Electrician Jim Whipple or our team will review your project details and get in touch shortly (typically within 24 hours).
         </p>
+        <div className="mt-4 rounded-lg bg-white/80 p-3.5 border border-green-200/60 max-w-md mx-auto text-xs text-charcoal-600">
+          <span className="font-semibold text-navy-900">Need urgent electrical help?</span> Call us directly at{' '}
+          <a href="tel:+13135906363" className="font-bold text-navy-900 underline hover:text-electric-600">
+            313-590-6363
+          </a>{' '}
+          for immediate 24-hour service.
+        </div>
         <button
           onClick={() => setStatus('idle')}
           className="mt-6 btn-secondary"
