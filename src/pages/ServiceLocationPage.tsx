@@ -22,61 +22,61 @@ const taylorServiceMetadata: Record<string, ServiceLocationSEO> = {
   'electrical-troubleshooting': {
     h1: 'Electrical Troubleshooting & Repair Services in Taylor, MI',
     title: 'Electrical Troubleshooting in Taylor, MI | Whipple Electric Inc',
-    description: 'Diagnose and resolve flickering lights, dead outlets, or tripping breakers with Master Electrician Jim Whipple in Taylor, MI. 40+ years experience. Call 313-590-6363.',
+    description: `Diagnose and resolve flickering lights, dead outlets, or tripping breakers with Master Electrician Jim Whipple in Taylor, MI. 40+ years experience. Call ${business.phone}.`,
     imageAlt: 'Master Electrician diagnosing circuit faults and voltage drop using a multimeter in Taylor, Michigan',
   },
   'electrical-panel-upgrades': {
     h1: 'Electrical Panel Upgrade Services in Taylor, MI',
     title: 'Electrical Panel Upgrades in Taylor, MI | Whipple Electric Inc',
-    description: 'Upgrade your Taylor, MI home from 60A/100A to 200-amp service. Code-compliant breaker box replacements by licensed Master Electrician. Call 313-590-6363.',
+    description: `Upgrade your Taylor, MI home from 60A/100A to 200-amp service. Code-compliant breaker box replacements by licensed Master Electrician. Call ${business.phone}.`,
     imageAlt: 'Licensed electrician wiring and installing a modern 200-amp breaker box panel in Taylor, MI',
   },
   'circuit-breaker-repair': {
     h1: 'Circuit Breaker Repair & Replacement in Taylor, MI',
     title: 'Circuit Breaker Repair in Taylor, MI | Whipple Electric Inc',
-    description: 'Repeatedly tripping breaker or burning smell in your panel? Safe breaker replacement and overload diagnostics in Taylor, MI. Call 313-590-6363.',
+    description: `Repeatedly tripping breaker or burning smell in your panel? Safe breaker replacement and overload diagnostics in Taylor, MI. Call ${business.phone}.`,
     imageAlt: 'Electrician replacing a faulty, hot circuit breaker in an electrical panel in Taylor, MI',
   },
   'electrical-wiring': {
     h1: 'Residential Electrical Wiring & Rewiring in Taylor, MI',
     title: 'Electrical Wiring & Rewiring in Taylor, MI | Whipple Electric Inc',
-    description: 'Whole-house rewiring, aluminum wire corrections, and dedicated circuit installation for Taylor, MI homes. 40+ years experience. Call 313-590-6363.',
+    description: `Whole-house rewiring, aluminum wire corrections, and dedicated circuit installation for Taylor, MI homes. 40+ years experience. Call ${business.phone}.`,
     imageAlt: 'Safe copper electrical wiring and junction box installation inside wall studs in Taylor, MI',
   },
   'outlet-switch-installation': {
     h1: 'Outlet & Switch Installation Services in Taylor, MI',
     title: 'Outlet & Switch Installation in Taylor, MI | Whipple Electric Inc',
-    description: 'Upgrade to 3-prong grounded receptacles, kitchen/bath GFCI outlets, and smart dimmers in Taylor, MI. Safe code compliance. Call 313-590-6363.',
+    description: `Upgrade to 3-prong grounded receptacles, kitchen/bath GFCI outlets, and smart dimmers in Taylor, MI. Safe code compliance. Call ${business.phone}.`,
     imageAlt: 'Professional installation of tamper-resistant GFCI safety receptacle in Taylor, MI',
   },
   'lighting-installation': {
     h1: 'Indoor & Outdoor Lighting Installation in Taylor, MI',
     title: 'Lighting Installation in Taylor, MI | Whipple Electric Inc',
-    description: 'Recessed LED lighting, chandeliers, security floodlights, and exterior landscape illumination installed cleanly in Taylor, MI. Call 313-590-6363.',
+    description: `Recessed LED lighting, chandeliers, security floodlights, and exterior landscape illumination installed cleanly in Taylor, MI. Call ${business.phone}.`,
     imageAlt: 'Custom recessed ceiling lighting and warm illumination layout in a Taylor, MI residence',
   },
   'ceiling-fan-installation': {
     h1: 'Ceiling Fan Installation & Wiring in Taylor, MI',
     title: 'Ceiling Fan Installation in Taylor, MI | Whipple Electric Inc',
-    description: 'Secure fan-rated ceiling box installation, vibration balancing, and wall switch controls for Taylor, MI homeowners. Call 313-590-6363.',
+    description: `Secure fan-rated ceiling box installation, vibration balancing, and wall switch controls for Taylor, MI homeowners. Call ${business.phone}.`,
     imageAlt: 'Master Electrician mounting a balanced ceiling fan to a structural fan-rated junction box in Taylor, MI',
   },
   'electrical-safety-inspection': {
     h1: 'Electrical Safety Inspection Services in Taylor, MI',
     title: 'Electrical Safety Inspection in Taylor, MI | Whipple Electric Inc',
-    description: 'Buying or renovating a Taylor home? Comprehensive electrical inspections covering panels, wiring, grounding, and code compliance. Call 313-590-6363.',
+    description: `Buying or renovating a Taylor home? Comprehensive electrical inspections covering panels, wiring, grounding, and code compliance. Call ${business.phone}.`,
     imageAlt: 'Electrician performing full code-compliance and safety load inspection on Taylor, MI residential wiring',
   },
   'commercial-electrical': {
     h1: 'Commercial Electrical Services in Taylor, MI',
     title: 'Commercial Electrician in Taylor, MI | Whipple Electric Inc',
-    description: 'Commercial repairs, 3-phase circuits, retail lighting, and panel maintenance for Taylor, MI businesses. Minimal downtime. Call 313-590-6363.',
+    description: `Commercial repairs, 3-phase circuits, retail lighting, and panel maintenance for Taylor, MI businesses. Minimal downtime. Call ${business.phone}.`,
     imageAlt: 'Commercial electrical switchgear and circuit distribution servicing in Taylor, Michigan',
   },
   'renovation-electrical': {
     h1: 'Renovation & Remodel Electrical Services in Taylor, MI',
     title: 'Renovation Electrical Services in Taylor, MI | Whipple Electric Inc',
-    description: 'Rough-in wiring, appliance circuits, and finish trim for kitchen, bath, and basement remodels in Taylor, MI. Call 313-590-6363.',
+    description: `Rough-in wiring, appliance circuits, and finish trim for kitchen, bath, and basement remodels in Taylor, MI. Call ${business.phone}.`,
     imageAlt: 'Kitchen remodel electrical rough-in and dedicated appliance circuit installation in Taylor, MI',
   },
 };
@@ -332,7 +332,7 @@ export default function ServiceLocationPage({ slug }: { slug: string }) {
                 <div className="mt-6 border-t border-charcoal-200/80 pt-4 flex flex-wrap items-center justify-between gap-3 text-xs text-charcoal-600">
                   <span>Serving {location.name} (Zip Codes: {location.zipCodes.join(', ')})</span>
                   <a href={`tel:${business.phoneTel}`} className="font-bold text-electric-700 hover:underline">
-                    Call 313-590-6363 for Immediate Questions
+                    Call {business.phone} for Immediate Questions
                   </a>
                 </div>
               </div>

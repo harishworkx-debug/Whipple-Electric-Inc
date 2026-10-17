@@ -162,7 +162,7 @@ export default function ServicesPage() {
               },
               {
                 q: 'What should I do if an outlet begins sparking or smoking?',
-                a: 'Immediately unplug whatever is connected if safe to do so, turn off the corresponding circuit breaker at the main panel, and call Whipple Electric Inc at 313-590-6363 immediately. Do not attempt to use the outlet.',
+                a: `Immediately unplug whatever is connected if safe to do so, turn off the corresponding circuit breaker at the main panel, and call Whipple Electric Inc at ${business.phone} immediately. Do not attempt to use the outlet.`,
               },
             ].map((faq, i) => (
               <details key={i} className="group rounded-xl border border-charcoal-200 bg-white p-5 shadow-card">

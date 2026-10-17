@@ -20,7 +20,7 @@ export default function HomePage() {
     <>
       <SEO
         title="Whipple Electric Inc | Electrician in Taylor, MI"
-        description="Whipple Electric Inc provides professional residential electrical services in Taylor, MI and the Metro Detroit area. Master Electrician with 40+ years of experience. Call 313-590-6363."
+        description={`Whipple Electric Inc provides professional residential electrical services in Taylor, MI and the Metro Detroit area. Master Electrician with 40+ years of experience. Call ${business.phone}.`}
         canonical="/"
         structuredData={getLocalBusinessSchema()}
       />
@@ -280,7 +280,7 @@ export default function HomePage() {
               {
                 step: '01',
                 title: 'Initial Consultation',
-                desc: 'Call 313-590-6363 or request an estimate online. We listen to the issue and discuss convenient scheduling.',
+                desc: `Call ${business.phone} or request an estimate online. We listen to the issue and discuss convenient scheduling.`,
               },
               {
                 step: '02',

@@ -1,8 +1,8 @@
 export const business = {
   name: 'Whipple Electric Inc',
-  phone: '313-590-6363',
-  phoneTel: '+13135906363',
-  altPhone: '734-946-4888',
+  phone: '+13136622940',
+  phoneTel: '+13136622940',
+  altPhone: '+13136622940',
   website: 'https://www.whippleelectricinc.com/',
   googleMapsLink: 'https://maps.app.goo.gl/gcPuwGGF86arCXNPA',
   googleMapsEmbed:

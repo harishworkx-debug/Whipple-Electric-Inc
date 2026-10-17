@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { CheckCircle2, AlertCircle, Send, Loader2 } from 'lucide-react';
 import { supabase } from '@/lib/supabase';
 import { services } from '@/data/services';
+import { business } from '@/data/business';
 
 interface EstimateFormProps {
   defaultService?: string;
@@ -149,8 +150,8 @@ export default function EstimateForm({ defaultService, defaultLocation, compact 
         </p>
         <div className="mt-4 rounded-lg bg-white/80 p-3.5 border border-green-200/60 max-w-md mx-auto text-xs text-charcoal-600">
           <span className="font-semibold text-navy-900">Need urgent electrical help?</span> Call us directly at{' '}
-          <a href="tel:+13135906363" className="font-bold text-navy-900 underline hover:text-electric-600">
-            313-590-6363
+          <a href={`tel:${business.phoneTel}`} className="font-bold text-navy-900 underline hover:text-electric-600">
+            {business.phone}
           </a>{' '}
           for immediate 24-hour service.
         </div>
@@ -170,7 +171,7 @@ export default function EstimateForm({ defaultService, defaultLocation, compact 
         <div className="flex items-start gap-3 rounded-lg border border-red-200 bg-red-50 p-4">
           <AlertCircle className="mt-0.5 h-5 w-5 shrink-0 text-red-600" />
           <p className="text-sm text-red-800">
-            Something went wrong submitting your request. Please try again or call us directly at 313-590-6363.
+            Something went wrong submitting your request. Please try again or call us directly at {business.phone}.
           </p>
         </div>
       )}
@@ -202,7 +203,7 @@ export default function EstimateForm({ defaultService, defaultLocation, compact 
             value={data.phone}
             onChange={(e) => update('phone', e.target.value)}
             className={`input-field ${errors.phone ? 'border-red-400 ring-2 ring-red-400/15' : ''}`}
-            placeholder="313-555-0123"
+            placeholder="+13136622940"
             aria-invalid={!!errors.phone}
           />
           {errors.phone && <p className="mt-1 text-xs text-red-600">{errors.phone}</p>}

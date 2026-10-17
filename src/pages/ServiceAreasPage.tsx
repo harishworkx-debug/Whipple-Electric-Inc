@@ -163,7 +163,7 @@ export default function ServiceAreasPage() {
               },
               {
                 q: 'What if my city is right on the border of your service area?',
-                a: 'If you live in a neighboring Wayne County community not explicitly listed, give us a call at 313-590-6363. We frequently accommodate homeowners throughout the wider Metro Detroit area.',
+                a: `If you live in a neighboring Wayne County community not explicitly listed, give us a call at ${business.phone}. We frequently accommodate homeowners throughout the wider Metro Detroit area.`,
               },
               {
                 q: 'Do you work directly with my city’s building inspector?',
