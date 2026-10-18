@@ -203,7 +203,7 @@ export default function EstimateForm({ defaultService, defaultLocation, compact 
             value={data.phone}
             onChange={(e) => update('phone', e.target.value)}
             className={`input-field ${errors.phone ? 'border-red-400 ring-2 ring-red-400/15' : ''}`}
-            placeholder="+13136622940"
+            placeholder="(313) 662-2940"
             aria-invalid={!!errors.phone}
           />
           {errors.phone && <p className="mt-1 text-xs text-red-600">{errors.phone}</p>}
