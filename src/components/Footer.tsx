@@ -53,13 +53,13 @@ export default function Footer() {
                     to={`/${service.slug}-taylor-mi`}
                     className="text-sm text-charcoal-300 transition-colors hover:text-electric-400"
                   >
-                    {service.shortName}
+                    {service.shortName} in Taylor
                   </Link>
                 </li>
               ))}
               <li>
                 <Link to="/services" className="text-sm font-semibold text-electric-400 hover:text-electric-300">
-                  View All Services
+                  View All Electrical Services &rarr;
                 </Link>
               </li>
             </ul>
@@ -74,13 +74,13 @@ export default function Footer() {
                     to={`/electrician-${location.slug}`}
                     className="text-sm text-charcoal-300 transition-colors hover:text-electric-400"
                   >
-                    {location.name}
+                    Electrician in {location.shortName}
                   </Link>
                 </li>
               ))}
               <li>
                 <Link to="/service-areas" className="text-sm font-semibold text-electric-400 hover:text-electric-300">
-                  View All Areas
+                  View All 10 Service Areas &rarr;
                 </Link>
               </li>
             </ul>

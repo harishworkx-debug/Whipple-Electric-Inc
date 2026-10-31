@@ -19,8 +19,8 @@ export default function HomePage() {
   return (
     <>
       <SEO
-        title="Whipple Electric Inc | Electrician in Taylor, MI"
-        description={`Whipple Electric Inc provides professional residential electrical services in Taylor, MI and the Metro Detroit area. Master Electrician with 40+ years of experience. Call ${business.phone}.`}
+        title="Electrician in Taylor, MI | Whipple Electric Inc"
+        description={`Trusted residential and commercial electrician in Taylor, MI. Master Electrician with 40+ years experience providing 200A panel upgrades, house rewiring, and emergency repairs. Call ${business.phone}.`}
         canonical="/"
         structuredData={getLocalBusinessSchema()}
       />
@@ -30,8 +30,10 @@ export default function HomePage() {
         <div className="absolute inset-0">
           <img
             src={images.heroElectrician}
-            alt="Professional electrician working on an electrical panel in Taylor, Michigan"
+            alt="Licensed electrical contractor working on an electrical panel in Taylor, Michigan"
             className="h-full w-full object-cover"
+            loading="eager"
+            fetchPriority="high"
           />
           <div className="absolute inset-0 bg-hero-overlay" />
         </div>
@@ -44,11 +46,11 @@ export default function HomePage() {
             </div>
 
             <h1 className="font-display text-4xl font-bold text-white text-balance text-shadow-lg animate-fade-in-up sm:text-5xl lg:text-display-md">
-              Reliable Electrical Services in Taylor, Michigan
+              Trusted Residential & Commercial Electrician in Taylor, MI
             </h1>
 
             <p className="mt-5 max-w-xl text-lg text-charcoal-200 animate-fade-in-delay">
-              Get in touch with Whipple Electric Inc to discuss your electrical project, repair, or installation needs.
+              Looking for a licensed electrician in Taylor, MI or an electrical contractor near Taylor? Master Electrician Jim Whipple brings 40+ years of local experience providing emergency electrical repair, 200-amp panel upgrades, residential rewiring, and commercial electrical services across Taylor and Downriver Michigan.
             </p>
 
             <div className="mt-8 flex flex-col gap-4 animate-fade-in-delay-2 sm:flex-row">
@@ -110,13 +112,13 @@ export default function HomePage() {
           <div className="mx-auto mb-12 max-w-2xl text-center">
             <div className="mb-3 inline-flex items-center gap-2 rounded-full bg-electric-400/10 px-4 py-1.5">
               <Zap className="h-4 w-4 text-electric-600" />
-              <span className="text-sm font-semibold text-electric-700">Our Services</span>
+              <span className="text-sm font-semibold text-electric-700">Residential & Commercial Services</span>
             </div>
             <h2 className="font-display text-3xl font-bold text-navy-900 text-balance lg:text-4xl">
-              Residential Electrical Services
+              Professional Electrical Services in Taylor, MI
             </h2>
             <p className="mt-4 text-lg text-charcoal-600">
-              From troubleshooting to panel upgrades to lighting installation, we handle the electrical work your home needs — safely and professionally.
+              From fast electrical repair and emergency troubleshooting to 200A panel upgrades and lighting installation, we are the licensed electrical contractor Taylor, MI homeowners and businesses trust.
             </p>
           </div>
 
@@ -141,13 +143,13 @@ export default function HomePage() {
           <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
             <div>
               <div className="mb-3 inline-flex items-center gap-2 rounded-full bg-navy-900/5 px-4 py-1.5">
-                <span className="text-sm font-semibold text-navy-700">Why Choose Whipple Electric Inc</span>
+                <span className="text-sm font-semibold text-navy-700">Downriver Electrician with 40+ Years Experience</span>
               </div>
               <h2 className="font-display text-3xl font-bold text-navy-900 text-balance lg:text-4xl">
-                A Local Electrician Who Listens and Explains
+                A Local Electrician in Taylor, Michigan Who Listens and Explains
               </h2>
               <p className="mt-4 text-lg text-charcoal-600">
-                We know that electrical problems can be stressful. That is why we focus on clear communication, honest assessments, and straightforward explanations of what your project involves.
+                When you need an experienced local electrician in Taylor, Michigan or surrounding Downriver communities, Master Electrician Jim Whipple delivers clear communication, honest upfront assessments, and code-compliant craftsmanship.
               </p>
 
               <div className="mt-8 space-y-6">
@@ -404,8 +406,8 @@ export default function HomePage() {
                 className="group flex flex-col items-center rounded-xl border border-charcoal-100 bg-white p-5 text-center shadow-card transition-all hover:border-electric-400/30 hover:shadow-card-lg"
               >
                 <MapPin className="h-6 w-6 text-electric-500 transition-colors group-hover:text-electric-600" />
-                <span className="mt-2 font-display text-sm font-bold text-navy-900">{location.shortName}</span>
-                <span className="text-xs text-charcoal-500">MI</span>
+                <span className="mt-2 font-display text-sm font-bold text-navy-900">Electrician in {location.shortName}</span>
+                <span className="text-xs text-charcoal-500">Wayne County, MI</span>
               </Link>
             ))}
           </div>

@@ -20,7 +20,7 @@ export default function ServiceCard({ service, variant = 'light' }: ServiceCardP
         <h3 className="font-display text-xl font-bold text-white">{service.name}</h3>
         <p className="mt-2 text-sm leading-relaxed text-charcoal-300">{service.description}</p>
         <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-electric-400 transition-all group-hover:gap-2.5">
-          {service.shortName}
+          {service.shortName} in Taylor
           <ArrowRight className="h-4 w-4" />
         </span>
       </Link>
@@ -35,7 +35,7 @@ export default function ServiceCard({ service, variant = 'light' }: ServiceCardP
       <h3 className="font-display text-xl font-bold text-navy-900">{service.name}</h3>
       <p className="mt-2 text-sm leading-relaxed text-charcoal-600">{service.description}</p>
       <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-navy-700 transition-all group-hover:gap-2.5 group-hover:text-electric-600">
-        {service.shortName}
+        {service.shortName} in Taylor
         <ArrowRight className="h-4 w-4" />
       </span>
     </Link>

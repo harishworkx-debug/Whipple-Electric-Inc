@@ -31,6 +31,69 @@
       ]
     }
   ],
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "whippleelectricinc.com"
+        }
+      ],
+      "destination": "https://www.whippleelectricinc.com/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/electrical-troubleshooting",
+      "destination": "/electrical-troubleshooting-taylor-mi",
+      "permanent": true
+    },
+    {
+      "source": "/electrical-panel-upgrades",
+      "destination": "/electrical-panel-upgrades-taylor-mi",
+      "permanent": true
+    },
+    {
+      "source": "/circuit-breaker-repair",
+      "destination": "/circuit-breaker-repair-taylor-mi",
+      "permanent": true
+    },
+    {
+      "source": "/electrical-wiring",
+      "destination": "/electrical-wiring-taylor-mi",
+      "permanent": true
+    },
+    {
+      "source": "/outlet-switch-installation",
+      "destination": "/outlet-switch-installation-taylor-mi",
+      "permanent": true
+    },
+    {
+      "source": "/lighting-installation",
+      "destination": "/lighting-installation-taylor-mi",
+      "permanent": true
+    },
+    {
+      "source": "/ceiling-fan-installation",
+      "destination": "/ceiling-fan-installation-taylor-mi",
+      "permanent": true
+    },
+    {
+      "source": "/electrical-safety-inspection",
+      "destination": "/electrical-safety-inspection-taylor-mi",
+      "permanent": true
+    },
+    {
+      "source": "/commercial-electrical",
+      "destination": "/commercial-electrical-taylor-mi",
+      "permanent": true
+    },
+    {
+      "source": "/renovation-electrical",
+      "destination": "/renovation-electrical-taylor-mi",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     {
       "source": "/(.*)",

@@ -34,13 +34,43 @@ export default function AboutPage() {
         <div className="container-max px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:items-center">
             <div>
-              <h2 className="font-display text-2xl font-bold text-navy-900 lg:text-3xl">Our Story</h2>
+              <div className="mb-3 inline-flex items-center gap-2 rounded-full bg-electric-400/10 px-4 py-1.5 border border-electric-400/20">
+                <Award className="h-4 w-4 text-electric-600" />
+                <span className="text-sm font-semibold text-navy-800">Master Electrician &bull; 40+ Years of Craftsmanship</span>
+              </div>
+              <h2 className="font-display text-2xl font-bold text-navy-900 lg:text-3xl">Meet Jim Whipple & Our Story</h2>
               <p className="mt-4 text-lg leading-relaxed text-charcoal-700">
-                Whipple Electric Inc has been serving homeowners in Taylor, Michigan and the surrounding communities for over {business.experience}. As a Master Electrician with deep roots in the area, we understand the housing stock, the electrical challenges, and the importance of safe, reliable power in your home.
+                Whipple Electric Inc was founded right here in Taylor, Michigan (14800 Burr St) by Master Electrician Jim Whipple. For more than 40 years, Jim has dedicated his career to solving complex electrical issues for Downriver homeowners and small businesses. Having lived and worked in Wayne County for decades, Jim possesses intimate, first-hand knowledge of the quirks found in post-war ranches, historic bungalows, and mid-century electrical distribution.
               </p>
               <p className="mt-4 text-lg leading-relaxed text-charcoal-700">
-                We focus on residential electrical work — from troubleshooting and repairs to panel upgrades, wiring, lighting, and safety inspections. Our approach is straightforward: listen to your concerns, explain what we find, and provide honest recommendations so you can make informed decisions about your home's electrical system.
+                Unlike large franchise outfits that dispatch commissioned junior sales technicians, when you call Whipple Electric Inc you speak directly with Jim Whipple. Every service call, panel heavy-up, and whole-house rewiring project is diagnosed, supervised, and executed to the highest National Electrical Code (NEC) standards with transparent, upfront pricing.
               </p>
+
+              {/* Verified Credentials Grid */}
+              <div className="mt-6 rounded-xl border border-charcoal-200 bg-charcoal-50 p-5">
+                <h3 className="font-display text-base font-bold text-navy-900 mb-3">
+                  Verified Licensing & Professional Credentials
+                </h3>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs text-charcoal-700">
+                  <div className="flex items-center gap-2">
+                    <ShieldCheck className="h-4 w-4 text-electric-600 shrink-0" />
+                    <span>State of Michigan Master Electrician</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <ShieldCheck className="h-4 w-4 text-electric-600 shrink-0" />
+                    <span>Licensed Electrical Contractor</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <ShieldCheck className="h-4 w-4 text-electric-600 shrink-0" />
+                    <span>Fully Insured & General Liability</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <ShieldCheck className="h-4 w-4 text-electric-600 shrink-0" />
+                    <span>100% Permitted Municipal Work</span>
+                  </div>
+                </div>
+              </div>
+
               <div className="mt-6 flex flex-col gap-3 sm:flex-row">
                 <a href={`tel:${business.phoneTel}`} className="btn-primary">
                   <Phone className="h-5 w-5" />

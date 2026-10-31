@@ -41,7 +41,7 @@ const locationSlugs = [
 ];
 
 const baseUrl = 'https://www.whippleelectricinc.com';
-const lastmod = '2025-01-15';
+const lastmod = new Date().toISOString().split('T')[0];
 
 let lines = [];
 lines.push('<?xml version="1.0" encoding="UTF-8"?>');

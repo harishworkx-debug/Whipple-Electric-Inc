@@ -86,26 +86,44 @@ export default function ServiceAreasPage() {
               <Link
                 key={location.slug}
                 to={`/electrician-${location.slug}`}
-                className="card group block"
+                className="card group block flex flex-col justify-between"
               >
-                <div className="card-icon mb-4 group-hover:bg-electric-400 group-hover:text-navy-900">
-                  <MapPin className="h-7 w-7" />
-                </div>
-                <h2 className="font-display text-xl font-bold text-navy-900">{location.name}</h2>
-                <p className="mt-2 text-sm leading-relaxed text-charcoal-600 line-clamp-3">{location.description}</p>
-                
-                <div className="mt-4 flex flex-wrap gap-1.5">
-                  {location.zipCodes.map((zip) => (
-                    <span key={zip} className="rounded-md bg-charcoal-100 px-2 py-0.5 text-xs font-medium text-charcoal-700">
-                      {zip}
+                <div>
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="card-icon group-hover:bg-electric-400 group-hover:text-navy-900">
+                      <MapPin className="h-7 w-7" />
+                    </div>
+                    <span className="text-xs font-semibold text-charcoal-500 bg-charcoal-100 rounded-full px-2.5 py-1">
+                      {location.dispatchDetails.distanceFromTaylorHQ}
                     </span>
-                  ))}
+                  </div>
+                  <h2 className="font-display text-xl font-bold text-navy-900">{location.name}</h2>
+                  <p className="mt-2 text-sm leading-relaxed text-charcoal-600 line-clamp-3">{location.description}</p>
+                  
+                  {/* Housing Focus & Permitting */}
+                  <div className="mt-3 rounded-lg bg-charcoal-50 p-2.5 text-xs text-charcoal-700 border border-charcoal-200/60">
+                    <span className="font-bold text-navy-900 block mb-0.5">Focus:</span>
+                    <span className="line-clamp-2">{location.housingStock.modernizationFocus}</span>
+                  </div>
+
+                  <div className="mt-3 flex flex-wrap gap-1.5">
+                    {location.zipCodes.map((zip) => (
+                      <span key={zip} className="rounded-md bg-charcoal-100 px-2 py-0.5 text-xs font-medium text-charcoal-700">
+                        {zip}
+                      </span>
+                    ))}
+                  </div>
                 </div>
 
-                <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-navy-700 transition-all group-hover:gap-2.5 group-hover:text-electric-600">
-                  Electrician in {location.shortName}
-                  <ArrowRight className="h-4 w-4" />
-                </span>
+                <div className="mt-4 pt-3 border-t border-charcoal-100 flex items-center justify-between">
+                  <span className="text-xs font-semibold text-electric-700">
+                    {location.dispatchDetails.avgResponseTime} Avg Response
+                  </span>
+                  <span className="inline-flex items-center gap-1 text-sm font-semibold text-navy-700 transition-all group-hover:gap-2 group-hover:text-electric-600">
+                    <span>Electrician in {location.shortName}</span>
+                    <ArrowRight className="h-4 w-4" />
+                  </span>
+                </div>
               </Link>
             ))}
           </div>

@@ -9,7 +9,7 @@ export default function NotFoundPage() {
       <SEO
         title="Page Not Found | Whipple Electric Inc"
         description="The page you are looking for could not be found. Please visit our homepage or contact Whipple Electric Inc for electrical services in Taylor, MI."
-        canonical="/404"
+        noindex={true}
       />
 
       <section className="flex min-h-[70vh] items-center bg-navy-900">
